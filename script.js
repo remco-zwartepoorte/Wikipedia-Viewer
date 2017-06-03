@@ -1,9 +1,17 @@
 document.addEventListener('DOMContentLoaded', function () {
-  getSearch();
 });
 
+document.getElementById("go-button").addEventListener('click', saveSearch);
+
+var searchText;
+
+function saveSearch() {
+  searchText = document.getElementById("searchtext").value;
+  getSearch();
+}
+
 function getSearch() {
-  var fetchURL = "https://en.wikipedia.org/w/api.php?&origin=*&action=opensearch&search=Belgium&limit=5"
+  var fetchURL = "https://en.wikipedia.org/w/api.php?&origin=*&action=opensearch&search=" + searchText + "&limit=10";
   fetch(fetchURL, {
     cache: "reload"
   })

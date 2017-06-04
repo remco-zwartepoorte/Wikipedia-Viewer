@@ -35,8 +35,12 @@ function fetchSearchResults() {
 
 function displaySearchResults() {
   resultList = "";
+  if (dataArray[1].length == 0) {
+    resultList = "<p>Sorry, no results found</p>";
+  }
   for (var i = 0; i < dataArray[1].length; i++) {
     resultList += "<a " + "href=" + dataArray[3][i] + "><dt>" + dataArray[1][i] + "</dt></a>" + "<dd>" + dataArray[2][i] + "<dd>";
   }
+
   document.getElementById("searchresults").innerHTML = resultList;
 }

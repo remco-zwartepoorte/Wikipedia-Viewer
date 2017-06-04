@@ -2,6 +2,10 @@
 //});
 
 document.getElementById("go-button").addEventListener('click', saveSearchText);
+document.getElementById("random-button").addEventListener('click', function () {
+  location.href = "https://en.wikipedia.org/wiki/Special:Random";
+});
+
 document.addEventListener('keypress', function (event) {
   if (event.keyCode == 13) {
     document.getElementById("go-button").click();

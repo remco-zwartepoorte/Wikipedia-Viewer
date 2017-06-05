@@ -1,54 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Wikipedia Viewer</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Wikipedia Viewer</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+      crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  </head>
 
-<body>
-  <div class="container">
-    <div class="header">
-      <h1 class="display-3">Wikipedia Viewer</h1>
-      <!-- <p class="lead">click here for a random article</p> -->
-    </div>
+  <body>
+    <div class="container">
+      <div class="header">
+        <div id="slideUp" class="display-3">Wikipedia Viewer</div>
+      </div>
 
-    <div class="row">
-      <div class="col-lg-offset-3 col-lg-12">
-        <div class="input-group input-group-lg">
-          <input id="searchtext" type="text" class="form-control" placeholder="Search for...">
-          <span class="input-group-btn">
+      <div id="fadeIn" class="row">
+        <div class="col-lg-offset-3 col-lg-12">
+          <div class="input-group input-group-lg">
+            <input id="searchtext" type="text" class="form-control" placeholder="Search for...">
+            <span class="input-group-btn">
             <button id="go-button" class="btn btn-secondary" type="button"><i class="fa fa-search" aria-hidden="true"></i></button>
           </span>
-          <span class="input-group-btn">
+            <span class="input-group-btn">
             <button id="random-button" class="btn btn-secondary" type="button"><i class="fa fa-random" aria-hidden="true"></i></button>
           </span>
+          </div>
         </div>
       </div>
-    </div>
 
-    <div id="searchresults">
-      <div class="row">
-        <div class="col-lg-12">
-          <p class="text"></p>
+      <div id="searchresults">
+        <div class="row">
+          <div class="col-lg-12">
+            <p class="text"></p>
+          </div>
         </div>
       </div>
     </div>
 
     <footer class="footer">
-      <p>Powered by
-        <a href="https://www.mediawiki.org/wiki/API:Main_page">
-          MediaWiki API</p><a/>
+      <div class="container">
+        <span class="text-muted"> Powered by <a href="https://www.mediawiki.org/wiki/API:Main_page">
+          MediaWiki API<a/></span>
+      </div>
     </footer>
 
-  </div>
-  <script src="script.js"></script>
-</body>
+
+    <script src="script.js"></script>
+  </body>
 
 </html>
